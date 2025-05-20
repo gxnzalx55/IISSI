@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registro</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script src="js/libs/bootstrap.min.js"></script>
+    <script src="js/libs/axios.min.js"></script>
+    <script src="js/utils/include.js"></script>
+</head>
+<body>
+    <div id="page-header"></div> <!-- Incrustar aquí cabecera común header.html con JavaScript -->
+    <script>include("header.html", "#page-header");</script>
+    <div class="container">
+        <h2 class="col-md text-center font-weight-light">
+            <i class="fa fa-user-plus"></i> Sign Up
+        </h2>
+        <form id="register-form">
+            <div class="row">
+                <div id="errors" class="form-group col-md"></div>
+            </div>
+            <div class="row">
+                <div class="col-md">
+                    <div class="form-group">
+                        <label for="fullName-input">Full name:</label>
+                        <input type="text" class="form-control" id="fullName-input" name="fullName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="username-input">Username:</label>
+                        <input type="text" class="form-control" id="username-input" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password-input">Password:</label>
+                        <input type="password" class="form-control" id="password-input" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password2-input">Repeat your password:</label>
+                        <input type="password" class="form-control" id="password2-input" name="password2" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-md text-center mb-2">
+                    <button type="button" class="btn btn-danger" onclick="window.location.href='index.html'">
+                        <i class="fa fa-home"></i> Cancel
+                    </button>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa fa-user-plus"></i> Sign Up
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="js/register.js" type="module"></script>
+</body>
+</html>
