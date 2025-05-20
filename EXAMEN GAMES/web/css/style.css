@@ -1,0 +1,14 @@
+nav.navbar {
+    background-color: rgb(202, 202, 202);
+}
+
+nav.navbar a {
+    color: rgb(41, 41, 41) !important;
+}
+div.card {
+    min-height: 97%;
+}
+img.img-fluid {
+    height: 300px;
+    width: 250px;
+}
