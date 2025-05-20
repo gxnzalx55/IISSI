@@ -1,0 +1,7 @@
+.limited-size {
+    max-width: 200px; /* Ajusta el valor según tus necesidades */
+    max-height: 200px; /* Ajusta el valor según tus necesidades */
+    width: auto; /* Esto mantiene la proporción de la imagen */
+    height: auto; /* Esto mantiene la proporción de la imagen */
+}
+

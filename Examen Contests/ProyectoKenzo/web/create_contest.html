@@ -1,0 +1,97 @@
+<!doctype HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="images/favicon.ico">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <script src="js/libs/bootstrap.min.js"></script>
+    <script src="js/libs/axios.min.js"></script>
+    <script src="js/utils/include.js"></script>
+
+    <script src="js/header.js" type="module"></script>
+    <script src="js/create_contest.js" type="module"></script>
+    <!-- CAMBIAR-->
+
+    <title>Upload a contest</title>
+    <!--CAMBIAR -->
+</head>
+
+<body>
+    <div id="page-header"></div>
+
+    <div class="container">
+        <div class="row" id="errors"></div>
+
+        <div class="row">
+            <div class="col-md text-center">
+                <h3>Create a Contest</h3>
+                <!-- CAMBIAR -->
+            </div>
+        </div>
+
+        <hr>
+
+        <form id="contest-form">
+            <!-- CAMBIAR -->
+            <div class="row">
+                <div class="col-md mb-3">
+                    <label for="name-input">Name:</label>
+                    <input type="text" class="form-control" id="name-input" name="name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md mb-3">
+                    <label for="organizer-input">Organizer:</label>
+                    <input type="text" class="form-control" id="organizer-input" name="organizer" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md mb-3">
+                    <label for="date-input">Contest Date:</label>
+                    <input type="date" class="form-control" id="contestDate-input" name="contestDate" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md mb-3">
+                    <label for="url-input">Contest Photo:</label>
+                    <!-- CAMBIAR -->
+                    <input type="text" class="form-control" id="url-input" name="imageUrl" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md mb-3">
+                    <label for="prize-input">Prize:</label>
+                    <input type="number" class="form-control" id="prize-input" name="prize" >
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md mb-3">
+                    <label for="description-input">Description:</label>
+                    <input type="text" class="form-control" id="description-input" name="description" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md text-center">
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+    </div>
+
+    <div id="page-footer"></div>
+
+    <script>
+        include("header.html", "#page-header");
+    </script>
+
+</body>
+
+</html>

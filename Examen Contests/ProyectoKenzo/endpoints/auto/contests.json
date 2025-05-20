@@ -1,0 +1,68 @@
+{
+    "getAll": {
+        "description": "Gets all entries from 'contests'",
+        "route": "/contests",
+        "method": "GET",
+        "sql": "SELECT * FROM contests",
+        "auth_required": false,
+        "allowed_roles": [
+            "*"
+        ]
+    },
+    "getById": {
+        "description": "Gets an entry from 'contests' by its primary key",
+        "route": "/contests/$contestId",
+        "method": "GET",
+        "sql": "SELECT * FROM contests WHERE contestId = $contestId",
+        "auth_required": false,
+        "allowed_roles": [
+            "*"
+        ]
+    },
+    "create": {
+        "description": "Creates a new entry in 'contests'",
+        "route": "/contests",
+        "method": "POST",
+        "sql": "INSERT INTO contests (name, organizer, contestDate, prize, description, imageUrl) VALUES ($name, $organizer, $contestDate, $prize, $description, $imageUrl)",
+        "request_body_params": [
+            "name",
+            "organizer",
+            "contestDate",
+            "prize",
+            "description",
+            "imageUrl"
+        ],
+        "auth_required": true,
+        "allowed_roles": [
+            "*"
+        ]
+    },
+    "update": {
+        "description": "Updates an existing entry in 'contests' by its primary key",
+        "route": "/contests/$contestId",
+        "method": "PUT",
+        "sql": "UPDATE contests SET name = $name, organizer = $organizer, contestDate = $contestDate, prize = $prize, description = $description, imageUrl = $imageUrl WHERE contestId = $contestId",
+        "request_body_params": [
+            "name",
+            "organizer",
+            "contestDate",
+            "prize",
+            "description",
+            "imageUrl"
+        ],
+        "auth_required": true,
+        "allowed_roles": [
+            "*"
+        ]
+    },
+    "delete": {
+        "description": "Deletes an existing entry in 'contests' by its primary key",
+        "route": "/contests/$contestId",
+        "method": "DELETE",
+        "sql": "DELETE FROM contests WHERE contestId = $contestId",
+        "auth_required": true,
+        "allowed_roles": [
+            "*"
+        ]
+    }
+}
