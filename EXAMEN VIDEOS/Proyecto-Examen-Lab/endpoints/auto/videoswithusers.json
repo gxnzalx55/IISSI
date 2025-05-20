@@ -1,0 +1,12 @@
+{
+    "getAll": {
+        "description": "Gets all entries from 'videoswithusers'",
+        "route": "/videoswithusers",
+        "method": "GET",
+        "sql": "SELECT * FROM videoswithusers",
+        "auth_required": false,
+        "allowed_roles": [
+            "*"
+        ]
+    }
+}

@@ -1,0 +1,68 @@
+{
+    "getAll": {
+        "description": "Gets all entries from 'videos'",
+        "route": "/videos",
+        "method": "GET",
+        "sql": "SELECT * FROM videos",
+        "auth_required": false,
+        "allowed_roles": [
+            "*"
+        ]
+    },
+    "getById": {
+        "description": "Gets an entry from 'videos' by its primary key",
+        "route": "/videos/$videoId",
+        "method": "GET",
+        "sql": "SELECT * FROM videos WHERE videoId = $videoId",
+        "auth_required": false,
+        "allowed_roles": [
+            "*"
+        ]
+    },
+    "create": {
+        "description": "Creates a new entry in 'videos'",
+        "route": "/videos",
+        "method": "POST",
+        "sql": "INSERT INTO videos (userId, title, description, uploadDate, durationSeconds, thumbnailUrl) VALUES ($userId, $title, $description, $uploadDate, $durationSeconds, $thumbnailUrl)",
+        "request_body_params": [
+            "userId",
+            "title",
+            "description",
+            "uploadDate",
+            "durationSeconds",
+            "thumbnailUrl"
+        ],
+        "auth_required": true,
+        "allowed_roles": [
+            "*"
+        ]
+    },
+    "update": {
+        "description": "Updates an existing entry in 'videos' by its primary key",
+        "route": "/videos/$videoId",
+        "method": "PUT",
+        "sql": "UPDATE videos SET userId = $userId, title = $title, description = $description, uploadDate = $uploadDate, durationSeconds = $durationSeconds, thumbnailUrl = $thumbnailUrl WHERE videoId = $videoId",
+        "request_body_params": [
+            "userId",
+            "title",
+            "description",
+            "uploadDate",
+            "durationSeconds",
+            "thumbnailUrl"
+        ],
+        "auth_required": true,
+        "allowed_roles": [
+            "*"
+        ]
+    },
+    "delete": {
+        "description": "Deletes an existing entry in 'videos' by its primary key",
+        "route": "/videos/$videoId",
+        "method": "DELETE",
+        "sql": "DELETE FROM videos WHERE videoId = $videoId",
+        "auth_required": true,
+        "allowed_roles": [
+            "*"
+        ]
+    }
+}

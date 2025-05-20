@@ -1,0 +1,93 @@
+<!doctype HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="images/favicon.ico">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <script src="js/libs/bootstrap.min.js"></script>
+    <script src="js/libs/axios.min.js"></script>
+    <script src="js/utils/include.js"></script>
+
+    <script src="js/header.js" type="module"></script>
+    <script src="js/create_video.js" type="module"></script>
+
+    <title>Examen IISSI-2</title>
+</head>
+
+<body>
+
+    <div id="page-header"></div>
+
+    <aside class="row">
+        <div id="errors"></div>
+    </aside>
+
+
+    <form id="formId">
+        <article class="col-sm-11 mx-auto">
+            <div class="row">
+
+                <div class="form-element">
+                    <label for="id-input">UserId:</label>
+                    <input type="text" class="form-control" id="id-input" name="userId" placeholder="userId"  required>
+                </div>
+
+
+
+                <div class="form-element">
+                    <label for="title-input">Title:</label>
+                    <input type="text" class="form-control" id="title-input" name="title" placeholder="title" required>
+                </div>
+
+
+                <div class="form-element">
+                    <label for="author-input">description:</label>
+                    <input type="text" class="form-control" id="author-input" name="description" placeholder="autor"
+                        required length%2=0>
+                </div>
+
+                <div class="form-element">
+                    <label for="releaseDate-input">uploadDate:</label>
+                    <input type="date" class="form-control" id="releaseDate-input" name="uploadDate"
+                        placeholder="uploadDate" required>
+                </div>
+
+
+                <div class="form-element">
+                    <label for="numPages-input">Duracion en segundos:</label>
+                    <input type="number" class="form-control" id="numPages-input" name="durationSeconds"
+                        placeholder="numPages" required min=5 max="50000">
+                </div>
+
+
+                <div class="form-element">
+                    <label for="imageUrl-input">URL:</label>
+                    <input type="input-Url" class="form-control" id="imageUrl-input" name="thumbnailUrl"
+                        placeholder="imageUrl" required>
+                </div>
+
+
+            </div>
+
+
+            <section class="row mt-2">
+
+                <button type="submit" class="btn btn-primary col-sm-2 mx-auto">
+                    Crear video
+                </button>
+
+            </section>
+        </article>
+    </form>
+
+
+    <script>
+        include("header.html", "#page-header");
+    </script>
+
+</body>
